@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.blcok{
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(231, 160, 28);
+}
+h2{
+    margin: 20px 0;
+}
+h3{
+    font: 1.3em Arial,sans-serif;
+    margin: 20px 0;
+    color: #fff;
+}
+input{
+   
+    outline: none;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    border: none;
+    background: yellow;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.5em;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    color: #fff;
+    background: rgb(4, 71, 172);
+}
+p{
+    font: 1.3em arial,sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 4, 255);
+}
+span{
+    font: 1em Arial,sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div class="blcok">
+        <h2>Rəqəmlərin hesablanması</h2>
+    <input type="text" id="a"/> 
+    <input type="text" id="b"/>
+   <input type="text" id="reqem3"/>
+    <button onclick="hesab()">Hesabla</button>
+    <button onclick="sil()">sil</button>
+    <p>Cəmi : <span id="ntc"></span></p>
+    <p>Orta : <span id="or"></span></p>
+    <p>Hasil : <span id="ha"></span></p>
+    <h3>Created by Nurlan :)</h3>
+</div>
+<script>
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let reqem3 = document.getElementById("reqem3")
+    let ntc = document.getElementById("ntc")
+    let or = document.getElementById("or")
+    let ha = document.getElementById("ha")
+    
+    function hesab(){
+        ntc.innerHTML = +a.value + +b.value + +reqem3.value
+        or.innerHTML = eval(+a.value + +b.value + +reqem3.value) / 3
+        ha.innerHTML = a.value * b.value * reqem3.value
+    }
+    function sil(){
+        document.getElementById("a").value=''
+        document.getElementById("b").value=''
+        document.getElementById("reqem3").value=''
+        ntc.innerHTML = value=''
+        or.innerHTML = value=''
+        ha.innerHTML = value=''
+       
+    }
+</script>
+</body>
+</html>
